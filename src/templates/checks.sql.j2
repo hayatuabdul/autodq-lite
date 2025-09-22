@@ -1,0 +1,45 @@
+-- Rendered for {{ dialect }}
+{% for c in checks %}
+-- {{ c.check_id }}: {{ c.title }} ({{ c.level }}) — {{ c.why }}
+{% if c.type == 'uniqueness' %}
+SELECT '{{ c.check_id }}' AS check_id,
+COUNT(*) - COUNT(DISTINCT {{ c.column }}) AS duplicate_count
+FROM {{ c.table }};
+
+
+{% elif c.type == 'nulls' %}
+SELECT '{{ c.check_id }}' AS check_id,
+SUM(CASE WHEN {{ c.column }} IS NULL THEN 1 ELSE 0 END) AS null_count
+FROM {{ c.table }};
+
+
+{% elif c.type == 'regex' %}
+SELECT '{{ c.check_id }}' AS check_id,
+SUM(CASE WHEN {{ regex_fn(c.column, c.params.pattern) }} THEN 0 ELSE 1 END) AS invalid_count
+FROM {{ c.table }};
+
+
+{% elif c.type == 'range' %}
+SELECT '{{ c.check_id }}' AS check_id,
+SUM(CASE WHEN {{ c.column }} < {{ c.params.min }} OR {{ c.column }} > {{ c.params.max }} THEN 1 ELSE 0 END) AS out_of_range
+FROM {{ c.table }};
+
+
+{% elif c.type == 'set' %}
+SELECT '{{ c.check_id }}' AS check_id,
+SUM(CASE WHEN {{ c.column }} NOT IN ({{ csv_list(c.params.allowed) }}) THEN 1 ELSE 0 END) AS invalid_values
+FROM {{ c.table }};
+
+
+{% elif c.type == 'foreign_key' %}
+SELECT '{{ c.check_id }}' AS check_id,
+COUNT(*) AS orphan_count
+FROM {{ c.table }} t
+LEFT JOIN {{ c.params.ref_table }} r ON t.{{ c.column }} = r.{{ c.params.ref_column }}
+WHERE r.{{ c.params.ref_column }} IS NULL;
+
+
+{% endif %}
+
+
+{% endfor %}

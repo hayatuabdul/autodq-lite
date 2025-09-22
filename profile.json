@@ -1,0 +1,229 @@
+{
+  "file_path": "examples\\crocodile_dataset.csv",
+  "total_rows": 1000,
+  "total_columns": 15,
+  "columns": [
+    {
+      "name": "Observation ID",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1000,
+      "sample_values": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "min": 1,
+      "max": 1000,
+      "mean": 500.5,
+      "std": 288.8194360957494
+    },
+    {
+      "name": "Common Name",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 18,
+      "sample_values": [
+        "Morelet's Crocodile",
+        "American Crocodile",
+        "Orinoco Crocodile",
+        "Morelet's Crocodile",
+        "Mugger Crocodile (Marsh Crocodile)"
+      ]
+    },
+    {
+      "name": "Scientific Name",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 18,
+      "sample_values": [
+        "Crocodylus moreletii",
+        "Crocodylus acutus",
+        "Crocodylus intermedius",
+        "Crocodylus moreletii",
+        "Crocodylus palustris"
+      ]
+    },
+    {
+      "name": "Family",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "sample_values": [
+        "Crocodylidae",
+        "Crocodylidae",
+        "Crocodylidae",
+        "Crocodylidae",
+        "Crocodylidae"
+      ]
+    },
+    {
+      "name": "Genus",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 3,
+      "sample_values": [
+        "Crocodylus",
+        "Crocodylus",
+        "Crocodylus",
+        "Crocodylus",
+        "Crocodylus"
+      ]
+    },
+    {
+      "name": "Observed Length (m)",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 390,
+      "sample_values": [
+        1.9,
+        4.09,
+        1.08,
+        2.42,
+        3.75
+      ],
+      "min": 0.14,
+      "max": 6.12,
+      "mean": 2.41511,
+      "std": 1.097542248338026
+    },
+    {
+      "name": "Observed Weight (kg)",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 837,
+      "sample_values": [
+        62.0,
+        334.5,
+        118.2,
+        90.4,
+        269.4
+      ],
+      "min": 4.4,
+      "max": 1139.7,
+      "mean": 155.7719,
+      "std": 175.18678806091816
+    },
+    {
+      "name": "Age Class",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "sample_values": [
+        "Adult",
+        "Adult",
+        "Juvenile",
+        "Adult",
+        "Adult"
+      ]
+    },
+    {
+      "name": "Sex",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 3,
+      "sample_values": [
+        "Male",
+        "Male",
+        "Unknown",
+        "Male",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "Date of Observation",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 936,
+      "sample_values": [
+        "31-03-2018",
+        "28-01-2015",
+        "07-12-2010",
+        "01-11-2019",
+        "15-07-2019"
+      ]
+    },
+    {
+      "name": "Country/Region",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 47,
+      "sample_values": [
+        "Belize",
+        "Venezuela",
+        "Venezuela",
+        "Mexico",
+        "India"
+      ]
+    },
+    {
+      "name": "Habitat Type",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 29,
+      "sample_values": [
+        "Swamps",
+        "Mangroves",
+        "Flooded Savannas",
+        "Rivers",
+        "Rivers"
+      ]
+    },
+    {
+      "name": "Conservation Status",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 5,
+      "sample_values": [
+        "Least Concern",
+        "Vulnerable",
+        "Critically Endangered",
+        "Least Concern",
+        "Vulnerable"
+      ]
+    },
+    {
+      "name": "Observer Name",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 989,
+      "sample_values": [
+        "Allison Hill",
+        "Brandon Hall",
+        "Melissa Peterson",
+        "Edward Fuller",
+        "Donald Reid"
+      ]
+    },
+    {
+      "name": "Notes",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1000,
+      "sample_values": [
+        "Cause bill scientist nation opportunity.",
+        "Ago current practice nation determine operation speak according.",
+        "Democratic shake bill here grow gas enough analysis least by two.",
+        "Officer relate animal direction eye bag do.",
+        "Class great prove reduce raise author play move each left establish understand read detail."
+      ]
+    }
+  ]
+}

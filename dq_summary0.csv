@@ -1,0 +1,11 @@
+column_name,column_type,check_type,sql_rule,description
+age,int64,range,SELECT COUNT(*) as failed_records FROM insurance WHERE age < 0 OR age > 200,Age Range Check
+age,int64,uniqueness,"SELECT age, COUNT(*) as duplicate_count FROM insurance GROUP BY age HAVING COUNT(*) > 1",Unique Age Check
+age,int64,range,SELECT COUNT(*) as failed_records FROM insurance WHERE age < 0 OR age > 200,Age Out of Range Check
+bmi,float64,nulls,,BMI Null Check
+bmi,float64,range,SELECT COUNT(*) as failed_records FROM insurance WHERE bmi IS NULL OR bmi < 0,BMI Range Check
+charges,float64,range,SELECT COUNT(*) as failed_records FROM insurance WHERE charges IS NULL OR charges < 0,Charges Range Check
+children,int64,nulls,,Children Null Check
+region,object,nulls,,Region Null Check
+sex,object,nulls,,Sex Null Check
+smoker,object,nulls,,Smoker Null Check

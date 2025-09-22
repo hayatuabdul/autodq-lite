@@ -1,0 +1,62 @@
+[
+  {
+    "column": "age",
+    "check_type": "range",
+    "description": "Age Range Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "age",
+    "check_type": "uniqueness",
+    "description": "Unique Age Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "sex",
+    "check_type": "nulls",
+    "description": "Sex Null Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "bmi",
+    "check_type": "nulls",
+    "description": "BMI Null Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "children",
+    "check_type": "nulls",
+    "description": "Children Null Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "smoker",
+    "check_type": "nulls",
+    "description": "Smoker Null Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "region",
+    "check_type": "nulls",
+    "description": "Region Null Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "bmi",
+    "check_type": "range",
+    "description": "BMI Range Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "charges",
+    "check_type": "range",
+    "description": "Charges Range Check",
+    "sql_condition": "TRUE"
+  },
+  {
+    "column": "age",
+    "check_type": "range",
+    "description": "Age Out of Range Check",
+    "sql_condition": "TRUE"
+  }
+]
